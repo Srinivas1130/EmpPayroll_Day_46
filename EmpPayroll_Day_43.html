@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/employeePayroll.css">
+    <title>Employee payroll Form</title>
+</head>
+
+<body>
+    <!-- UC1 -->
+    <header class="header-content header">
+     <div class="logo-content">
+        <img src="../Assets/assets/images/logo.png">
+    <div>
+        <span class="employee-text">Employee</span><br>
+        <span class="employee-text employeeDetails">Payroll</span>
+     </div>
+     </div>
+    </header>
+        <div class="form-content">
+        <div class="form-head">
+            <span> EMPLOYEE PAYROLL FORM </span>
+        </div>
+        
+        <form class="form" action="#" onsubmit="save(); false">
+            <label class="label text" for="name">Full Name</label>
+            
+            <!-- UC2 -->
+            <div class="row-content">
+                <input class="input" type="text" id="fullname" name="fullname" placeholder="Enter Name" required>
+                <error-output class="fullname-error" for="name"></error-output>
+            </div>
+
+            <!-- UC3 -->
+            <div class="row-content">
+                <label class="text" for="profile">Profile image</label>
+                <div class="profile-radio-content">
+            <label>
+                <input class="input" type="radio" id="profile1" value="funny.png" required>
+                <img src="funny.png" alt="logo" class="profile" id="profile1">
+            </label>
+            <label>
+                <input class="input" type="radio" id="profile2" value="goggels.jfif" required>
+                <img src="goggels.jfif" alt="logo" class="profile" id="profile1">
+            </label>
+            <label>
+                <input class="input" type="radio" id="profile3" value="handsome.jfif" required>
+                <img src="handsome.jfif" alt="logo" class="profile" id="profile1">
+            </label>
+            <label class="profile">
+                <input class="input" type="radio" id="profile4" value="roundedImage.png" required>
+                <img src="roundedImage.png" alt="logo" class="profile" id="profile1">
+            </label>
+            </div>
+    
+            </label>
+            </div>
+            <label class="text" for="phone">Phone Number</label>
+            <div class="row-content">
+                <input class="input" type="number" id="phone" name="phone" placeholder="Enter Phone Number" required>
+                <error-output class="phone-error" for="number"></error-output>
+            </div>
+
+            <!-- UC4 -->
+            <label class="text" for="gender">Gender</label>
+            <div class="row-content">
+                <input class="input" type="radio" name="gender" id="male" value="male">
+                <label class="text" for="male">Male</label>
+                <input class="input" type="radio" name="gender" id="female" value="male">
+                <label class="text" for="female">Female</label>
+            </div>
+    
+            <label class="text" for="department">Department</label>
+            <div class="row-content">
+                <input class="input" type="checkbox" name="hr" id="hr" value="HR">
+                <label class="text" for="HR">HR</label>
+                <input class="input" type="checkbox" name="sales" id="sales" value="Sales">
+                <label class="text" for="sales">Sales</label>
+                <input class="input" type="checkbox" name="finance" id="finance" value="Finance">
+                <label class="text" for="finance">Finance</label>
+                <input class="input" type="checkbox" name="engineers" id="engineers" value="Engineers">
+                <label class="text" for="engineers">Engineers</label>
+                <input class="input" type="checkbox" name="others" id="others" value="Others">
+                <label class="text" for="others">Others</label>
+            </div>
+    
+            <label class="text" for="salary">Choose your Salary</label>
+            <div class="row-content">
+                <input class="input" type="range" name="salary" id="salary" value="Salary"
+                min="300000" max="500000" value="400000" step="100">
+                <label class="text" for="salary">Salary</label>
+                <output class="salary-output" for="salary">400000</output>
+            </div>
+            <!-- UC5 -->
+            <div class="row-content">
+                <label class="text" for="date">Start Date</label>
+            </div>
+            <div>
+            <select name="day" id="day" >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+            </select>
+
+            <select name="month" id="month">
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+               <option value="4">4</option>
+               <option value="5">5</option>
+               <option value="6">6</option>
+               <option value="7">7</option>
+               <option value="8">8</option>
+               <option value="9">9</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+            </select>
+
+            <select name="year" id="year">
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+            </select>
+            </div>
+            <label class="text" for="address">Address</label>
+            <div class="row-content">
+                <textarea class="input" name="address" id="address" rows="4" placeholder="Enter Address"></textarea>
+            </div>
+
+            <div class="row">
+                <div class="input-content">
+                    <label class="text" for="city">City</label>
+                    <div class="row-content">
+                        <select class="input" name="city" id="city">
+                            <option value="">City</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Patna">Pune</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Jaipur">Nagpur</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-content">
+                    <label class="label text" for="state">State</label>
+                    <div class="row-content">
+                        <select class="input" name="state" id="state">
+                            <option value="">State</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="West Bengal">West Bengal</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-content">
+                    <label class="label text" for="zip">ZipCode</label>
+                    <div class="row-content">
+                        <input class="input" type="number" id="zip" name="zip" placeholder="Enter Zip Code" required>
+                        <error-output class="zip-error" for="number"></error-output>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UC6 -->
+            <div class="buttonParent">
+                <div class="add-reset">
+                    <button type="submit" class="button addButton" id="addButton">Add</button>
+                    <button type="reset" class="resetButton button" id="resetButton">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="../JS/employeePayroll.js">
+    </script>
+</body>
+
+</html>
